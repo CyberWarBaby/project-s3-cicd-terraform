@@ -53,7 +53,7 @@ jobs:
 
       - name: Terraform Plan
         id: plan
-        run: terraform plan -no-color -input=false
+        run: terraform plan -no-color -input=false -var="site_bucket_name=habeeb-static-site-demo2"
         continue-on-error: true
 
       - name: Comment plan on PR
@@ -100,4 +100,4 @@ jobs:
         run: terraform init
 
       - name: Terraform Apply
-        run: terraform apply -auto-approve -input=false
+        run: terraform apply -auto-approve -input=false -var="site_bucket_name=habeeb-static-site-demo2"
