@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head><title>Terraform CI/CD Demo</title></head>
+<body style="font-family: sans-serif; text-align: center; margin-top: 10%;">
+  <h1>Deployed via GitHub Actions</h1>
+  <p>S3 + CloudFront, provisioned with Terraform using an S3 remote backend
+     and a DynamoDB lock table. Every push through a pull request runs
+     <code>terraform plan</code>; merging to main runs
+     <code>terraform apply</code> automatically.</p>
+</body>
+</html>
