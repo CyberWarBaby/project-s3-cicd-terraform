@@ -4,8 +4,8 @@
 
 terraform {
   backend "s3" {
-    #lock_table_name = "habeeb-project-s3-cicd-lock"
-    bucket = "habeeb-project-s3-cicd"
+    # lock_table_name = "habeeb-project-s3-cicd-lock"
+    bucket         = "habeeb-project-s3-cicd"
     key            = "static-site/terraform.tfstate"
     region         = "eu-west-1"
     dynamodb_table = "habeeb-project-s3-cicd-lock"
