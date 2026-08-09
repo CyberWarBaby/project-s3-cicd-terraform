@@ -17,9 +17,9 @@ resource "aws_cloudfront_distribution" "site" {
 
   default_cache_behavior {
     allowed_methods        = ["GET", "HEAD"]
-    cached_methods          = ["GET", "HEAD"]
-    target_origin_id        = "s3-${var.site_bucket_name}"
-    viewer_protocol_policy   = "redirect-to-https"
+    cached_methods         = ["GET", "HEAD"]
+    target_origin_id       = "s3-${var.site_bucket_name}"
+    viewer_protocol_policy = "redirect-to-https"
 
     forwarded_values {
       query_string = false
